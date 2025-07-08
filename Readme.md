@@ -1,5 +1,4 @@
 
-```markdown
 # 📰 Full Stack Blog App – Docker + NGINX + React + Express
 
 This is a complete full stack blog application built with:
