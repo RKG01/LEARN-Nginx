@@ -1,0 +1,40 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency folders
+frontend/node_modules/
+backend/node_modules/
+
+# Build output
+frontend/dist/
+backend/build/
+
+# dotenv environment files
+*.env
+.env.*
+
+# Docker junk
+**/.DS_Store
+**/.dockerignore
+**/Dockerfile
+docker-compose.override.yml
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# IDE/editor config
+.vscode/
+.idea/
+*.swp
+
+# Build caches
+frontend/.vite/
+backend/.cache/
+*.tsbuildinfo
+
+# Optional: Ignore local Mongo volumes if used
+mongo-data/

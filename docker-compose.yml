@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: react_frontend
+    restart: always
+
+  backend:
+    build: ./backend
+    container_name: express_backend
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx_reverse_proxy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./frontend/dist:/usr/share/nginx/html   # ✅ Add this line
+    depends_on:
+      - frontend
+      - backend
